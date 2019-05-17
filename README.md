@@ -319,5 +319,5 @@ The instructions below will setup an instance of the development environment of 
 
 1. Chirag Mittal [@mittalchirag](<https://github.com/mittalchirag>)
 2. Harshit Sharma [@hrshtt](<https://github.com/hrshtt>)
-3. Rishabh Mittal [@rishmit](<https://github.com/mitrish>)
+3. Rishabh Mittal [@mitrish](<https://github.com/mitrish>)
 4. Prof. N D Gangadhar
