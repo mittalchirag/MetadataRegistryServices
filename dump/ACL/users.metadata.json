@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"ACL.users"},{"v":2,"unique":true,"key":{"username":1},"name":"username_1","ns":"ACL.users","background":true}],"uuid":"c44924ec35f24a60ac3f0ecafd789a2a"}

@@ -1,3 +1,4 @@
-
 sudo service mongod start;
-sudo service elsticsearch start;
+sudo service elasticsearch start;
+cd /home/vagrant;
+npm run services;

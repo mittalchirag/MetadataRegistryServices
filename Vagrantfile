@@ -5,6 +5,10 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
+unless Vagrant.has_plugin?('vagrant-vbguest')
+  raise 'vagrant-vbguest is not installed!'
+end
+
 Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
@@ -23,7 +27,11 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 8080, host: 3000
+  config.vm.network "forwarded_port", guest: 3030, host: 3030
+  config.vm.network "forwarded_port", guest: 3031, host: 3031
+  config.vm.network "forwarded_port", guest: 3032, host: 3032
+  config.vm.network "forwarded_port", guest: 3033, host: 3033
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
@@ -65,6 +73,7 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "./.scripts/bootstrap.sh"
   config.vm.provision "shell", path: "./.scripts/setup.sh", run: "always"
+  config.vm.provision "shell", path: "./.scripts/mongodump.sh"
 
   #   apt-get update
   #   apt-get install -y apache2

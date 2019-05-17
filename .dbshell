@@ -1,0 +1,6 @@
+show databases;
+use ACL db
+show databases;
+use ACL;
+db.acls.find({}).pretty();
+db.users.find({}).pretty();

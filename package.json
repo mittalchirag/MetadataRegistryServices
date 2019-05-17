@@ -1,0 +1,22 @@
+{
+  "name": "mdr-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "services": "concurrently --kill-others \"cd 'Metadata Registry/' && npm start\" \"cd 'Access Control Service/' && npm start\" \"cd 'Create Service/' && npm start\" \"cd 'Storage Service/' && npm start\" \"cd 'Search Service/' && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mittalchirag/MetadataRegistryServices.git"
+  },
+  "author": "Chirag Mittal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mittalchirag/MetadataRegistryServices/issues"
+  },
+  "homepage": "https://github.com/mittalchirag/MetadataRegistryServices#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
