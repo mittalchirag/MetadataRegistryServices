@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+            <h1 class="title has-text-centered register-heading-text">Sign In here</h1>
+            <form name="loginForm" class="login-form" ng-submit="main.doLogin(loginData);">
+                <div class="field">
+                    <label class="label register-text">Username</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="is-dark input register-input-field register-text" name="email" type="text"
+                            placeholder="Email input" ng-model="main.loginData.username"
+                            ng-class="{ 'is-success':(loginForm.email.$valid && !loginForm.email.$pristine),
+                                            'is-danger': (!loginForm.email.$valid && !loginForm.email.$pristine)||(loginForm.$submitted && !loginForm.email.$valid)}" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span
+                            ng-show="(!loginForm.email.$pristine && loginForm.email.$valid && !loginForm.email.$error.required)"
+                            class="icon is-small is-right">
+                            <i class="fas fa-check " style="color:greenyellow;"> </i>
+                        </span>
+                        <span
+                            ng-show="(!loginForm.email.$pristine && (!loginForm.email.$valid || loginForm.email.$error.required))"
+                            class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle" style="color:#cc4a37;"></i>
+                        </span>
+                        <p ng-show="(!loginForm.email.$pristine && loginForm.email.$error.required) || (loginForm.$submitted && loginForm.email.$error.required)"
+                            class="help is-danger">Required to login</p>
+
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label register-text">Password</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="is-dark input  register-input-field register-text" name="password" type="password"
+                            placeholder="" ng-model="main.loginData.password">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-key"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field center-column is-grouped">
+                    <div class="control">
+                        <button class="button is-link" ng-disabled="loginForm.$invalid" type="submit">Login</button>
+                    </div>
+                </div>
+
+            </form>
+            <br>
+            <div class="notification is-danger" ng-show="main.errorMsg">
+                <button class="delete" ng-click="main.errorMsg=!main.errorMsg"></button>
+                <p class="is-dark is-size-5">
+                    {{ main.errorMsg }}
+                </p>
+            </div>
+            <div class="notification is-success" ng-show="main.successMsg">
+                <button class="delete" ng-click="main.successMsg=!main.successMsg"></button>
+                <p class="is-dark">
+                    {{ main.successMsg }}
+                </p>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+</div>

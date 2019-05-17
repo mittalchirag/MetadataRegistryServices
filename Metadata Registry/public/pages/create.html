@@ -1,0 +1,162 @@
+<div class="container" ng-controller="formCtrl as form">
+    <form name="creationForm" class="creation-form" novalidate>
+        <div class="field is-horizontal animated fadeInUp" ng-init="form.template.type=false">
+            <div class="field-label is-medium">
+                <label class="label">Type</label>
+            </div>
+            <div class="field-body">
+                <div class="field is-narrow">
+                    <div class="control">
+                        <div class="select is-medium is-fullwidth">
+                            <select ng-model="form.template.type" required>
+                                <option value="blood">Blood Test Report</option>
+                                <option value="ecg">ECG Report</option>
+                                <option value="bp">Blood Pressure Report</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button ng-disabled="!form.template.type" class="button is-link is-medium"
+                            ng-click="form.getTemplate(form.template.type)">Generate Template</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="animation" ng-show="!form.templateLoading">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Patient Age</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control is-expanded has-icons-left">
+                            <input class="input is-dark" type="number" style="width:25vw"
+                                ng-model="form.metadata.patient.age" required>
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Patient Gender</label>
+                </div>
+                <div class="field-body">
+                    <div class="field is-narrow">
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select ng-model="form.metadata.patient.gender" required>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Prefer Not to Say</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="title is-size-5 is-bold">Tests Conducted</h1>
+            </div>
+            <br>
+            <div class="box" ng-repeat="test in form.td.tests">
+
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="form.metadata.tests[$index].name" ng-true-value="'{{test.name}}'"
+                        ng-false-value="false">
+                    <strong class="is-bold is-size-6">{{test.name}}</strong>
+                </label>
+
+                <p>{{test.desc}}</p>
+
+                <div ng-show="form.metadata.tests[$index].name">
+                    <div class="field is-narrow">
+                        <div class="control">
+                            <input class="input is-dark" style="width: 20vw" type="number"
+                                ng-model="form.metadata.tests[$index].count">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div ng-show="form.metadata.tests[$parent.$index].name" ng-repeat="spec in test.specs">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="checkbox">
+                                <input type="checkbox" ng-model="form.metadata.tests[$parent.$index].specs[$index].name"
+                                    ng-true-value="'{{spec.name}}'" ng-false-value="false">
+                                <strong class="is-bold is-size-6">{{spec.name}}</strong>
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <div class="control">
+                                    <input ng-disabled="!form.metadata.tests[$parent.$index].specs[$index].name"
+                                        class="input is-dark" type="number"
+                                        ng-model="form.metadata.tests[$parent.$index].specs[$index].count">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+            <div class="field">
+                <div class="file is-medium has-name is-fullwidth">
+                    <label class="file-label">
+                        <input class="file-input" type="file" ngf-select ng-model="form.file" name="file">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Upload the Knowledge Item
+                            </span>
+                        </span>
+                        <span class="file-name">
+                                {{form.file.name}}
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <div class="field is-grouped" ng-show="!form.templateLoading">
+            <div class="control">
+                <button class="button is-link is-medium" ng-click="form.createMetadata(metadata)"
+                    ng-disabled="creationForm.$invalid" type="submit">Submit</button>
+            </div>
+            <div class="control">
+                <button class="button is-danger is-medium">Reset</button>
+            </div>
+        </div>
+
+
+
+    </form>
+    <br>
+    <!-- BootstrapJS Modal -->
+    <div class="modal" id="creationModal" role="dialog">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+
+                <p class="modal-card-title">{{ form.modalHead }}</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <p>{{ form.modalContent }}</p>
+                <div ng-show="form.hideButton" class="dizzy-gillespie"></div>
+            </section>
+        </div>
+    </div>
+
+</div>

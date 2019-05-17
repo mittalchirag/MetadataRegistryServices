@@ -1,0 +1,22 @@
+<div class="container has-text-centered animated fadeInUp ">
+    <h1 class="title sub-heading">
+        Metadata Search
+    </h1>
+
+    <div class="get-started-section">
+        <div class="field is-grouped">
+            <p class="control is-expanded"><input placeholder="Your Query" class="input is-dark is-large" ng-model="search.query.payload" ng-keydown="$event.keyCode === 13 && search.search(query)"></p>
+            <p class="control"><a class="button is-large is-dark is-outlined " ng-click="search.search(query)"  > Search </a></p>
+        </div>
+    </div>
+    <div class="advanced-search" style="margin-top: 1rem;">
+        <div class="field">
+            <div class="control">
+                <button class="button is-link is-outlined">Advanced Search</button>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

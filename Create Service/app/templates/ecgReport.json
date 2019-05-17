@@ -1,0 +1,63 @@
+{
+    "patient-details": {
+        "name": null,
+        "gender": null,
+        "age": null
+    },
+    "number-of-tests": 4,
+    "tests": [
+        {
+            "name": "Heartrate",
+            "desc": "Heart rate, or pulse, is the number of times your heart beats per minute. Normal heart rate varies from person to person. Knowing yours can be an important heart-health gauge.",
+            "presence": null,
+            "range": {
+                "range-type": "count",
+                "range-unit": "beats per minute",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 100,
+                    "healthy-range-lowerlimit": 60
+                }
+            }
+        },
+        {
+            "name": "PR interval",
+            "desc": "Measured from the beginning of the P wave to the first deflection of the QRS complex",
+            "presence": null,
+            "range": {
+                "range-type": "time",
+                "range-unit": "milliseconds",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 200,
+                    "healthy-range-lowerlimit": 120
+                }
+            }
+        },
+        {
+            "name": "QRS duration",
+            "desc": "Measured from first deflection of QRS complex to end of QRS complex at isoelectric line",
+            "presence": null,
+            "range": {
+                "range-type": "time",
+                "range-unit": "milliseconds",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 120,
+                    "healthy-range-lowerlimit": 10
+                }
+            }
+        },
+        {
+            "name": "QT interval",
+            "desc": "Measured from first deflection of QRS complex to end of T wave at isoelectric line",
+            "presence": null,
+            "range": {
+                "range-type": "time",
+                "range-unit": "milliseconds",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 440,
+                    "healthy-range-lowerlimit": 50
+                }
+            }
+        }
+    ],
+    "diagnosis/results": null
+}

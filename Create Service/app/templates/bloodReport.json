@@ -1,0 +1,264 @@
+{
+    "patient-details": {
+        "name": null,
+        "gender": null,
+        "age": null
+    },
+    "number-of-tests": 13,
+    "tests": [
+        {
+            "name": "White blood cell (WBC) count",
+            "desc": "Also known as leukocytes, white blood cells are a major component of the body’s immune system.",
+            "presence": null,
+            "range": {
+                "range-type": "count",
+                "range-unit": "per microLiter",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 11000,
+                    "healthy-range-lowerlimit": 4000
+                }
+            },
+            "number-of-spec": 5,
+            "specs": [
+                {
+                    "name": "Neutrophils",
+                    "presence": null,
+                    "range": {
+                        "range-type": "percentage",
+                        "generic-healthy-range": {
+                            "healthy-range-upperlimit": 60,
+                            "healthy-range-lowerlimit": 40
+                        }
+                    }
+                },
+                {
+                    "name": "Lymphocytes",
+                    "presence": null,
+                    "range": {
+                        "range-type": "percentage",
+                        "generic-healthy-range": {
+                            "healthy-range-upperlimit": 40,
+                            "healthy-range-lowerlimit": 20
+                        }
+                    }
+                },
+                {
+                    "name": "Monocytes",
+                    "presence": null,
+                    "range": {
+                        "range-type": "percentage",
+                        "generic-healthy-range": {
+                            "healthy-range-upperlimit": 8,
+                            "healthy-range-lowerlimit": 2
+                        }
+                    }
+                },
+                {
+                    "name": "Eosinophiles",
+                    "presence": null,
+                    "range": {
+                        "range-type": "percentage",
+                        "generic-healthy-range": {
+                            "healthy-range-upperlimit": 4,
+                            "healthy-range-lowerlimit": 1
+                        }
+                    }
+                },
+                {
+                    "name": "Basephils",
+                    "presence": null,
+                    "range": {
+                        "range-type": "percentage",
+                        "generic-healthy-range": {
+                            "healthy-range-upperlimit": 1,
+                            "healthy-range-lowerlimit": 0.5
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Red blood cell (RBC) count",
+            "desc": "A red blood cell (RBC) count is a blood test that tells you how many red blood cells you have. Red blood cells contain a substance called haemoglobin, which transports oxygen around the body.",
+            "presence": null,
+            "range": {
+                "range-type": "count",
+                "range-unit": "million per microLiter",
+                "mens-healthy-range": {
+                    "healthy-range-upperlimit": 6.1,
+                    "healthy-range-lowerlimit": 4.7
+                },
+                "womens-healthy-range": {
+                    "healthy-range-upperlimit": 5.4,
+                    "healthy-range-lowerlimit": 4.2
+                }
+            },
+            "specs": [
+                {
+                    "name": "Hematocrit (Hct) test",
+                    "desc": "Tests what proportion of the blood is made up of RBCs. It is useful in diagnosing anemia, among other medical conditions.",
+                    "presence": null,
+                    "range": {
+                        "range-type": "percentage",
+                        "mens-healthy-range": {
+                            "healthy-range-upperlimit": 54,
+                            "healthy-range-lowerlimit": 42
+                        },
+                        "womens-healthy-range": {
+                            "healthy-range-upperlimit": 46,
+                            "healthy-range-lowerlimit": 38
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Hemoglobin (Hgb) test",
+            "desc": "Hemoglobin is a protein contained within red RBCs that sends oxygen from the lungs to the body’s tissues.",
+            "presence": null,
+            "range": {
+                "range-type": "gram",
+                "range-unit": "gram per deciLiter",
+                "mens-healthy-range": {
+                    "healthy-range-upperlimit": 18,
+                    "healthy-range-lowerlimit": 14
+                },
+                "womens-healthy-range": {
+                    "healthy-range-upperlimit": 16,
+                    "healthy-range-lowerlimit": 12
+                }
+            }
+        },
+        {
+            "name": "Mean corpuscular volume (MCV) test",
+            "desc": "The test tells the average volume of red cells in a specimen.",
+            "presence": null,
+            "range": {
+                "range-type": "volume",
+                "range-unit": "femtoLiter per red cell",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 96,
+                    "healthy-range-lowerlimit": 80
+                }
+            }
+        },
+        {
+            "name": "Mean corpuscular hemoglobin (MCH) test",
+            "desc": "The test tells the average amount of hemoglobin present in each red blood cell.",
+            "presence": null,
+            "range": {
+                "range-type": "weight",
+                "range-unit": "picoGram per red cell",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 33,
+                    "healthy-range-lowerlimit": 27
+                }
+            }
+        },
+        {
+            "name": "Red cell distribution width (RDW or RCDW) test",
+            "desc": "Tests the distribution of RBCs, not their actual size. Levels outside of the normal range can indicate conditions such as anemia, malnutrition and liver disease.",
+            "presence": null,
+            "range": {
+                "range-type": "size-1D",
+                "range-unit": "microMeter",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 8,
+                    "healthy-range-lowerlimit": 2
+                }
+            }
+        },
+        {
+            "name": "Platelet count",
+            "desc": "Platelets are small cells that help the blood to clot. This test measures the amount of platelets present in the blood.",
+            "presence": null,
+            "range": {
+                "range-type": "count",
+                "range-unit": "per microLitre",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 450000,
+                    "healthy-range-lowerlimit": 150000
+                }
+            }
+        },
+        {
+            "name": "Mean platelet volume (MPV)",
+            "desc": "Tests the volume of platelets in the blood. A low platelet volume can cause irregularities with bleeding, while a high platelet volume can increase an individual’s risk of heart attack or stroke.",
+            "presence": null,
+            "range": {
+                "range-type": "volume",
+                "range-unit": "femtoLitre",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 12.3,
+                    "healthy-range-lowerlimit": 9.4
+                }
+            }
+        },
+        {
+            "name": "Fasting blood sugar test",
+            "desc": "",
+            "presence": null,
+            "range": {
+                "range-type": "weight",
+                "range-unit": "milligram per deciLiter",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 100,
+                    "healthy-range-lowerlimit": 5
+                }
+            }
+        },
+        {
+            "name": "Total protein test",
+            "desc": "The lab tests the ratio of two types of proteins: albumin and globulin. Low protein levels can indicate various conditions, including liver and kidney disorders and malnutrition, while high levels can be a sign of inflammation, infection or bone marrow disorder.",
+            "presence": null,
+            "range": {
+                "range-type": "weight",
+                "range-unit": "gram per deciLiter",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 8.3,
+                    "healthy-range-lowerlimit": 6
+                }
+            }
+        },
+        {
+            "name": "Calcium test",
+            "desc": "This test measures the levels of calcium in the blood. If testing indicates low levels, this can indicate cancer, hyperparathyroidism, tuberculosis and other conditions, while high levels can indicate conditions including malnutrition, rickets and hypoparathyroidism.        ",
+            "presence": null,
+            "range": {
+                "range-type": "weight",
+                "range-unit": "miligram per deciLiter",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 10.5,
+                    "healthy-range-lowerlimit": 8.5
+                }
+            }
+        },
+        {
+            "name": "HDL cholesterol test",
+            "desc": "HDL cholesterol, also known as high-density lipoprotein (or good cholesterol), is useful in protecting against heart disease. Low levels can increase the risk of heart problems.",
+            "presence": null,
+            "range": {
+                "range-type": "weight",
+                "range-unit": "miligram per deciLiter",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 200,
+                    "healthy-range-lowerlimit": 50
+                }
+            }
+        },
+        {
+            "name": "LDL cholesterol test",
+            "desc": "LDL cholesterol, also known as low-density lipoprotein (or bad cholesterol), is linked to heart disease and clogged arteries.",
+            "presence": null,
+            "range": {
+                "range-type": "weight",
+                "range-unit": "miligram per deciLiter",
+                "generic-healthy-range": {
+                    "healthy-range-upperlimit": 129,
+                    "healthy-range-lowerlimit": 50
+                }
+            }
+        }
+    ],
+    "diagnosis/results": null
+}

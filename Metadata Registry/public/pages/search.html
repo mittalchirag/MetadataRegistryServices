@@ -1,0 +1,109 @@
+<div class="container">
+
+    <div class="get-started-section">
+        <div class="field is-grouped">
+            <p class="control is-expanded">
+                <input placeholder="MDR Search" class="input is-dark is-medium" ng-model="search.query.payload"
+                    ng-keydown="$event.keyCode === 13 && search.search(query)">
+            </p>
+            <p class="control"><a class="button  is-medium is-dark is-outlined " ng-click="search.search(query)"> Search
+                </a></p>
+        </div>
+    </div>
+
+
+    <p class="is-size-6 has-text-grey" style="padding-top: 10px; margin-bottom: 0px;">
+        About 101 Results in 0.23 seconds
+    </p>
+    <hr class="has-background-grey " style="margin: 10px 0px;">
+    <div style="font-family:Verdana, Geneva, Tahoma, sans-serif" ng-repeat="result in search.results">
+        <div class="columns is-mobile">
+            <div class="column is-three-quarters">
+                <h1 class="has-text-link is-size-5 ">{{result._source.title}}</h1>
+                <p class="has-text-success"><a href="{{result._source.url}}" target="_blank">{{result._source.url}}</a>
+                </p>
+                <p class="has-text-grey-dark">{{result._source.tests[0].name}}, {{result._source.tests[1].name}},
+                    {{result._source.tests[2].name}}</p>
+                <p class="has-text-grey-dark">
+                    <span style="padding-right:2%;">Patient</span>
+                    <span style="padding-right:2%;">• {{result._source.patient.gender}}</span>
+                    <span style="padding-right:2%;">• {{result._source.patient.age}}</span>
+                </p>
+                <p>
+                    <span class="has-text-grey" style="margin-right:10%">Created By: {{result._source.author}}</span>
+                    <span class="has-text-grey">Date Created: 25/02/19</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <table class="table has-text-white body-font  is-narrow  is-fullwidth" style="background-color: transparent;">
+             <thead class="table-header">
+                <tr>
+                    <th>CourtID</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Game</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Book?</th>
+                </tr>
+            </thead>
+
+            <tbody ng-repeat="x in main.data | filter:main.searchText">
+                <tr>
+                    <td>{{ x.CourtID }}</td>
+
+                    <td>{{ x.Street }}</td>
+
+                    <td>{{ x.City }}</td>
+
+                    <td>{{ x.Country }}</td>
+
+                    <td>{{ x.Game }}</td>
+
+                    <td>{{ x.StartTime }}</td>
+
+                    <td>{{ x.EndTime }}</td>
+
+                    <td>
+                        <input type="button" class="button is-white is-outlined" value="Book" ng-model="main.select"
+                            name="booking" ng-click="main.bookCourt(x)" required="required"></input>
+                    </td>
+                </tr>
+            </tbody>             
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="is-size-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                        <div class="subtitle">test1, test2, test3</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="is-size-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                        <div class="subtitle">test1, test2, test3</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="is-size-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                        <div class="subtitle">test1, test2, test3</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="is-size-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                        <div class="subtitle">test1, test2, test3</div>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table> -->
+
+
+</div>

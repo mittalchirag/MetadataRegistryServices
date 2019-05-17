@@ -1,0 +1,82 @@
+body {
+    background: #fff;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    /* background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027);
+    background-image: linear-gradient(to top, #2C5364, #203A43, #0F2027); */
+
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5),
+     rgba(0, 0, 0, 0.5)),
+     url('https://source.unsplash.com/random/1200x900') no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    
+    
+}
+
+.logo{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.get-started-section input {
+    background: transparent;
+    color: black
+}
+
+.get-started-section input:focus,
+.get-started-section input:hover {
+    border-color: black
+}
+
+.get-started-section input::placeholder {
+    color: #030101;
+}
+
+.creation-form label {
+    color: black;
+}
+
+.creation-form input {
+    background: transparent;
+    color: black
+}
+
+.creation-form input:focus,
+.creation-form input:hover {
+    border-color: black
+}
+
+.creation-form input::placeholder {
+    color: #030101;
+}
+
+.login-form label {
+    color: black;
+}
+
+.login-form input {
+    background: transparent;
+    color: black
+}
+
+.login-form input:focus,
+.login-form input:hover {
+    border-color: black
+}
+
+.login-form input::placeholder {
+    color: #030101;
+}
+.animation {
+    transition: all linear 0.5s;
+  }
+  .animation.ng-hide {
+    opacity: 0;
+  }

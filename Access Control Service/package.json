@@ -1,0 +1,44 @@
+{
+  "name": "access-control-service",
+  "version": "1.0.0",
+  "description": "A servie to control the access of users to Metadata Items and Knowledge Repositories",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mittalchirag/Access-Control-Service.git"
+  },
+  "scripts":{
+    "start": "node index.js"
+  },
+  "keywords": [
+    "authentication",
+    "authorization",
+    "acl",
+    "access",
+    "metadata",
+    "registry",
+    "repository",
+    "knowledge",
+    "data"
+  ],
+  "author": "Chirag Mittal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mittalchirag/Access-Control-Service/issues"
+  },
+  "homepage": "https://github.com/mittalchirag/Access-Control-Service#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1"
+  }
+}

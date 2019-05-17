@@ -74,6 +74,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "./.scripts/bootstrap.sh"
   config.vm.provision "shell", path: "./.scripts/setup.sh", run: "always"
   config.vm.provision "shell", path: "./.scripts/mongodump.sh"
+  config.vm.provision "shell", path: "./.scripts/runServer.sh", run: "always"
 
   #   apt-get update
   #   apt-get install -y apache2

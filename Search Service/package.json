@@ -1,0 +1,30 @@
+{
+  "name": "search-service",
+  "version": "1.0.0",
+  "description": "Metadata service for searching the MDR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mittalchirag/Search-Service.git"
+  },
+  "scripts":{
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mittalchirag/Search-Service/issues"
+  },
+  "homepage": "https://github.com/mittalchirag/Search-Service#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "elasticsearch": "^16.0.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.5",
+    "morgan": "^1.9.1"
+  }
+}

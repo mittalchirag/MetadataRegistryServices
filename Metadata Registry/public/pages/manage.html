@@ -1,0 +1,109 @@
+<div class="container" ng-controller="searchCtrl">
+
+    <div>
+        <p class="is-size-3">Username</p>
+    </div>
+
+
+    <p class="is-size-6 has-text-dark" style="padding-top: 10px; margin-bottom: 0px;">
+        7 Metadata Items Created
+    </p>
+    <hr class="has-background-grey " style="margin: 10px 0px;">
+    <div style="font-family:Verdana, Geneva, Tahoma, sans-serif" ng-repeat="result in results">
+        <div class="columns">
+            <div class="column is-three-quarters">
+                <h1 class="has-text-link is-size-5 ">Item {{result}} Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit</h1>
+                <div>
+                    <span>
+                        <a class="button is-small  is-dark is-outlined" ui-sref="create">
+                            <span class="icon">
+                                <i class="far fa-edit"></i>
+                            </span>
+                            <span>Edit</span>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="button  is-small is-dark is-outlined">
+                            <span class="icon">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                            <span>Delete</span>
+                        </a>
+                    </span>
+                </div>
+                <p class="has-text-grey is-size-7">Date Created: 25/02/19</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <table class="table has-text-white body-font  is-narrow  is-fullwidth" style="background-color: transparent;">
+             <thead class="table-header">
+                <tr>
+                    <th>CourtID</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Game</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Book?</th>
+                </tr>
+            </thead>
+
+            <tbody ng-repeat="x in main.data | filter:main.searchText">
+                <tr>
+                    <td>{{ x.CourtID }}</td>
+
+                    <td>{{ x.Street }}</td>
+
+                    <td>{{ x.City }}</td>
+
+                    <td>{{ x.Country }}</td>
+
+                    <td>{{ x.Game }}</td>
+
+                    <td>{{ x.StartTime }}</td>
+
+                    <td>{{ x.EndTime }}</td>
+
+                    <td>
+                        <input type="button" class="button is-white is-outlined" value="Book" ng-model="main.select"
+                            name="booking" ng-click="main.bookCourt(x)" required="required"></input>
+                    </td>
+                </tr>
+            </tbody>             
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="is-size-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                        <div class="subtitle">test1, test2, test3</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="is-size-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                        <div class="subtitle">test1, test2, test3</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="is-size-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                        <div class="subtitle">test1, test2, test3</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="is-size-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                        <div class="subtitle">test1, test2, test3</div>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table> -->
+
+
+</div>
